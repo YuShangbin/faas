@@ -1,30 +1,67 @@
-## Project backers
+# Project backers
 
 We need your support to keep delivering on Serverless Functions Made Simple so pledge to OpenFaaS and [become a backer or a sponsor](https://www.patreon.com/alexellis) with a unique set of rewards. Help us hit our goals and get to back a great project at the same time.
 
 View this page for live data [on Patreon for everyone who has pledged](https://www.patreon.com/alexellis).
 
-### OpenFaaS Sponsors
+## OpenFaaS Sponsors
 
-Become a sponsor and have your logo placed on the [OpenFaaS website](https://www.openfaas.com/)
+You can [become a sponsor here](https://www.patreon.com/alexellis).
 
-### Backers
+### Platinum Sponsors
+
+Be the first.
+
+### Gold Sponsors
+
+Be the first.
+
+### Silver Sponsors:
+
+Be the first.
+
+### Bronze Sponsors
+
+* [ASYNCY](https://asyncy.com)
+* [Serverless Nomad](https://www.serverlessnomad.com)
+
+<!---
+Pending start in April 2019 with first sponsorship payment:
+
+* [Garden.io](https://garden.io)
+* [Contiamo](https://www.contiamo.com)
+
+-->
+
+## Backers
 
 Listed by reward, followed by miscellaneous amounts. Names are (pending) until first pledge is taken by Patreon, this is at the start of each month.
 
-* Weston Steimel
-* Wesley Kennedy
-* Sivaramakrishnan Malikkal
-* Richard Petersen-Hall
-* Rafael Barbosa
-* Pav Jimanov
-* Owen Dall Sotomayor
-* Murugappan Sevugan Chetty
-* Markus Fischbacher
-* Mark Jeromin
-* José Roberto Almaráz Da Cunha Júnior
-* Johnny Mkhael
+* Andrew Cornies
+* Benjamin Neil
+* Chad Taylor
+* Contiamo
+* David Salek
 * Garden Germany GmbH
+* Johnny MKHAEL 
+* Julio
+* Lewis Bowman
+* Mark Jeromin
+* Matias Pan
+* Martin Dekov
+* Murugappan Sevugan Chetty
+* Owen Dall Sotomayor
+* Patricio Diaz
+* Pav Jimanov
+* Rafael Barbosa
+* Richard Petersen-Hall
+* Ruan Bekker
+* scott rosenberg
+* Sergey Radov
+* Sivaramakrishnan Malikkal
+* Steve Peak
+* Weston Steimel
+* Younes Amardaya
 
 Miscellaneous rewards/amounts are not shown.
 

@@ -206,8 +206,9 @@ func main() {
 		r.PathPrefix("/ui/").Handler(uiHandler).Methods(http.MethodGet)
 	}
 
-	metricsHandler := metrics.PrometheusHandler()
-	r.Handle("/metrics", metricsHandler)
+	//Start metrics server in a goroutine
+	go runMetricsServer()
+
 	r.HandleFunc("/healthz", handlers.MakeForwardingProxyHandler(reverseProxy, forwardingNotifiers, urlResolver, nilURLTransformer)).Methods(http.MethodGet)
 
 	r.Handle("/", http.RedirectHandler("/ui/", http.StatusMovedPermanently)).Methods(http.MethodGet)
@@ -220,6 +221,29 @@ func main() {
 		WriteTimeout:   config.WriteTimeout,
 		MaxHeaderBytes: http.DefaultMaxHeaderBytes, // 1MB - can be overridden by setting Server.MaxHeaderBytes.
 		Handler:        r,
+	}
+
+	log.Fatal(s.ListenAndServe())
+}
+
+//runMetricsServer Listen on a separate HTTP port for Prometheus metrics to keep this accessible from
+// the internal network only.
+func runMetricsServer() {
+	metricsHandler := metrics.PrometheusHandler()
+	router := mux.NewRouter()
+	router.Handle("/metrics", metricsHandler)
+	router.HandleFunc("/healthz", handlers.HealthzHandler)
+
+	port := 8082
+	readTimeout := 5 * time.Second
+	writeTimeout := 5 * time.Second
+
+	s := &http.Server{
+		Addr:           fmt.Sprintf(":%d", port),
+		ReadTimeout:    readTimeout,
+		WriteTimeout:   writeTimeout,
+		MaxHeaderBytes: http.DefaultMaxHeaderBytes,
+		Handler:        router,
 	}
 
 	log.Fatal(s.ListenAndServe())
